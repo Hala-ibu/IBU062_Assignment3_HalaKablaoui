@@ -34,9 +34,10 @@ ip address 210.3.14.1 255.255.255.0
 (the first one is the ip address for the interface going on also called the default gateway for the devices connected to the other network and the second one is the subnet mask that allows nearly 65,000+ ip addresses in the network ip address)
 no shutdown 
 (activates the interface thing)
-------------------------------------------------------------------
+
+
 the first was to create the interfaces now for the DHCP's to be able to automaticaly assign the ip adresses for the devices in each network
-------------------------------------------------------------------
+
 the second thing I did:
 ! DHCP pool for the first switch 
 ip dhcp pool FirstSwitch
@@ -55,6 +56,6 @@ default-router 210.3.14.1
 (the router will take 210.3.14.1 so the other divices wil take from .2 till needed max .254, but mainly this will allow the devices to comunicate through the router interface as a gateway to other networks)
 exit
 (the exit is here to just to exit the DHCP config and go back to the global config mode)
-------------------------------------------------------------------------
+
+
 after all of this I went to each device desktop and into the ip configuration I switched it from static to DHCP so i can get an automaticaly made IPV4 address like 168.90.0.3, the .3 states the exact device address which help in uniqely identifying the devices so you can know to which other device you will communicate (I did this switching across all the devices on the network)
-------------------------------------------------------------------------
